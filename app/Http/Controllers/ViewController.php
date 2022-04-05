@@ -25,6 +25,9 @@ class ViewController extends Controller
         return view("articles.mostViewed",["articles" => $articles ]);
     }
 
+    /**
+     * @param array $query
+     */
     public function updateArticle(array $query)
     {
         Article::find($query["id"])->update([

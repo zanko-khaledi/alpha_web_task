@@ -8,7 +8,9 @@
          <header>
              <h4 id="title">{{$article->title}}</h4>
          </header>
-         <p class="lead">{{$article->description}}</p>
+         <div class="description text-end">
+             <p class="lead">{{$article->description}}</p>
+         </div>
          <small>{{$article->created_at}}</small>
         <input type="hidden" name="article_id" value="{{$article->id}}" id="article_id">
     </div>
