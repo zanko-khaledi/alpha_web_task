@@ -2,6 +2,8 @@
 
 @section("content")
 
+
+
   <div class="form-group">
       <div class="text-end">
           <a href="{{route("articles")}}" class="btn btn-link">مقالات</a>

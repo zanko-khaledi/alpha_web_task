@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ArticleRequest;
 use App\Models\Article;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cookie;
-use Illuminate\Support\Facades\Http;
+
 
 class ArticleController extends Controller
 {
@@ -37,11 +37,11 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
         $article = Article::create($request->only(["title","description"]));
 
-        return !$article ?: redirect("/");
+        return !$article ? : redirect("/");
     }
 
     /**
